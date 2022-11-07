@@ -1,0 +1,25 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Create Boxes</Name>
+  <AddInID>{297a965c-cab4-427f-92bb-d94ba97dc1f7}</AddInID>
+  <Description>Creates graphical boxes to aid in navigating a map during quality control.</Description>
+  <Version>3.0</Version>
+  <Image>Images\createBoxes_addin.png</Image>
+  <Author>Jim Chappell and Heather Stanton</Author>
+  <Company>CSU-NPS</Company>
+  <Date>10/02/2019</Date>
+  <Targets>
+    <Target name="Desktop" version="10.6" />
+  </Targets>
+  <AddIn language="CLR" library="createBoxes_addin.dll" namespace="createBoxes_addin">
+    <ArcMap>
+      <Commands>
+        <Button id="CSU-NPS_createBoxes_addin_cmdCreateBoxes" class="cmdCreateBoxes" message="Creates graphical boxes in ArcMap to aid in navigating the map during quality control" caption="Create boxes v3.0" tip="Create boxes v3.0" category="GRI Creation Tools" image="Images\cmdCreateBoxes.png" />
+      </Commands>
+      <DockableWindows>
+        <DockableWindow id="CSU-NPS_createBoxes_addin_frmCreateBoxes" class="frmCreateBoxes+AddinImpl" caption="Create Boxes" image="Images\frmCreateBoxes.png">
+          <InitialPlacement height="200" width="400" state="unpinned" position="float" />
+        </DockableWindow>
+      </DockableWindows>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
